@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +13,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  background-color: var(--bg-color);
+  font-family: var(--main-font), sans-serif;
+  color: var(--text-color);
 }
 
 p,
@@ -19,4 +28,149 @@ ol,
 li,
 figure {
   margin: 0;
+}
+
+.header {
+  padding-top: 10%;
+}
+
+.heading {
+  font-family: STIX Two Text;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%;
+  text-align: center; 
+}
+
+.content-section {
+  padding: 0 5vw;
+}
+
+.header-title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  padding-bottom: 40px;
+}
+
+.content-title {
+  font-size: 30px;
+  padding-top: 7%;
+  padding-bottom: 2.5%;
+}
+
+.content__text-block {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.link {
+  color: inherit; 
+}
+
+.content__blockquote {
+  width: 75%;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 200%;
+  margin: 0 12.5%;
+  padding-bottom: 1.5em;
+}
+
+.content__list {
+  list-style: none;
+  padding: 0;
+  margin-inline-start: 40px;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url(/images/marker-light.svg);
+}
+
+li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.content__text-block_type_first-lettered .content__paragraph:first-child::first-letter {
+  display: inline-block;
+  background-color: var(--accent-color);
+  padding: 0 4px;
+  margin-right: 1px;
+}
+
+.content__figure {
+  margin: 7% auto;
+  min-width: calc(100% + 10vw);
+  position: relative;
+  left: -5vw;
+}
+
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__picture-caption {
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #312A4E;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content__card {
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-top: 7%;
+  border: 1px solid currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content__card-title {
+  font-family: STIX Two Text;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%;
+}
+
+.content__card-subtitle {
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+  text-align: end;
+}
+
+.colored-text::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  right: -4px;
+  bottom: 9px;
+  width: 102%;
+  height: 0.2em;
+  z-index: -1;
 }
