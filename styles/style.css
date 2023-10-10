@@ -193,6 +193,7 @@ li::before {
   background-image: url(../images/marker-dark.svg);
 }
 
+
 li:not(:last-child) {
   margin-bottom: 10px;
 }
