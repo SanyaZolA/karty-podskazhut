@@ -2,6 +2,8 @@
   --bg-color: #F3EFEC;
   --text-color: #312A4E;
   --accent-color:  #FFAB6B;
+  --main-font: Raleway;
+  --accent-font: STIX Two Text;
 }
 
 button:focus,
